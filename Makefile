@@ -5,14 +5,14 @@ endif
 include vars.secret.mk
 .EXPORT_ALL_VARIABLES:
 
-lol:
-	@echo $(TF_VAR_ssh_key_hesham)
-.PHONY: lol
+init_terraform:
+	terraform init
+.PHONY: init_terraform
 
-plan_terraform:
-	@echo "We are planning terraform"
+plan_terraform: init_terraform
+	terraform plan
 .PHONY: plan_terraform
 
 apply_terraform:
-	@echo "We are applying terraform"
+	terraform apply
 .PHONY: apply_terraform
