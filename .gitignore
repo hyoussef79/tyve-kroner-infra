@@ -1,2 +1,6 @@
+# Terraform
+.terraform/
+terraform.tfstate.d/
+
 # Ignore secret variables
 vars.secret.mk
