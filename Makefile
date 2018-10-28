@@ -13,6 +13,6 @@ plan_terraform: init_terraform
 	terraform plan
 .PHONY: plan_terraform
 
-apply_terraform:
+apply_terraform: init_terraform
 	terraform apply
 .PHONY: apply_terraform
